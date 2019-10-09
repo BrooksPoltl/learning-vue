@@ -6,12 +6,16 @@ new Vue({
         y: 0,
     },
     methods:{
-        increase: function(){
-            this.counter++;
+        increase: function(step, event){
+            this.counter += step;
+
         },
         updateCoordinates: function(event){
             this.x = event.clientX;
             this.y = event.clientY;
+        },
+        dummy: function(event){
+            event.stopPropagation();
         }
     }
 });
