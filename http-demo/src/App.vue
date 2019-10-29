@@ -37,7 +37,7 @@
         },
         methods: {
             submit() {
-                this.$http.post('https://http-demo-d4999.firebaseio.com/data.json', this.user)
+                this.$http.post('data.json', this.user)
                 .then( res => {
                         console.log(res);
                     }, error =>{
@@ -45,7 +45,7 @@
                     })
             },
             fetchData() {
-                this.$http.get('https://http-demo-d4999.firebaseio.com/data.json')
+                this.$http.get('data.json')
                 .then( res =>{
                     return res.json();
                     
