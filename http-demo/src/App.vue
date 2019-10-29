@@ -47,7 +47,6 @@
             fetchData() {
                 this.$http.get('data.json')
                 .then( res =>{
-                    console.log(res)
                     return res.json();
                     
                 })
@@ -57,9 +56,8 @@
                     const resultArr = [];
 
                     for(let key in data) {
-                        resultArr.push(data);
+                        resultArr.push(data[key]);
                     }
-
                     this.users = resultArr;
                 });
                 
