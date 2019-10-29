@@ -20,6 +20,8 @@
                 <ul class="list-group">
                     <li class="list-group-item" v-for = "(u, index) in users" :key = "index" >{{ u.username }} - {{ u.email }}</li>
                 </ul>
+                <br>
+                <br>
             </div>
         </div>
     </div>
