@@ -47,20 +47,24 @@
             fetchData() {
                 this.$http.get('data.json')
                 .then( res =>{
+                    console.log(res)
                     return res.json();
                     
                 })
                 .then(data =>{
+                    console.log(data)
+                
                     const resultArr = [];
 
                     for(let key in data) {
-                        resultArr.push(data[key]);
+                        resultArr.push(data);
                     }
 
                     this.users = resultArr;
                 });
-                console.log(this.users)
+                
             }
+
         }
     }
 </script>
