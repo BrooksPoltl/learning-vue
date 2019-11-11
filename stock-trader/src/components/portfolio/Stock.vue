@@ -22,7 +22,7 @@
                         class = "btn btn-success"
                         @click = "sellStock"
                         :disabled = " insufficientQuantity ||quantity <= 0 || !Number.isInteger(quantity)"
-                        >{{ insufficientQuantity? "Not enough Stocks": "Sell"}}</button>
+                        >{{ insufficientQuantity? "Not enough": "Sell"}}</button>
                 </div>
             </div>
         </div>
